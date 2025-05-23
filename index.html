@@ -3,26 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather App</title>
+  <title>🌤️ Weather App</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-    <h1>🌤️ Weather App Information</h1>
+    <h1>🌍 Weather Forecast</h1>
     <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
       <button onclick="getWeather()">Search</button>
     </div>
+
+    <div id="loading" class="hidden">⏳ Loading...</div>
     <div id="error" class="hidden error-text">❌ City not found</div>
+
     <div id="weatherResult" class="hidden weather-box">
-      <h2 id="cityName"></h2>
-      <p><strong>🌡️ Temperature:</strong> <span id="temperature"></span> °C</p>
-      <p><strong>☁️ Description:</strong> <span id="description"></span></p>
-      <p><strong>💧 Humidity:</strong> <span id="humidity"></span>%</p>
-      <p><strong>🌬️ Wind Speed:</strong> <span id="wind"></span> m/s</p>
+      <div class="weather-header">
+        <h2 id="cityName"></h2>
+        <span id="countryFlag"></span>
+        <img id="weatherIcon" alt="Weather Icon" />
+      </div>
+      <div class="weather-details">
+        <p><strong>🌡️ Temperature:</strong> <span id="temperature"></span> °C</p>
+        <p><strong>🤒 Feels Like:</strong> <span id="feelsLike"></span> °C</p>
+        <p><strong>☁️ Description:</strong> <span id="description"></span></p>
+        <p><strong>💧 Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>🌬️ Wind Speed:</strong> <span id="wind"></span> m/s</p>
+        <p><strong>🌅 Sunrise:</strong> <span id="sunrise"></span></p>
+        <p><strong>🌇 Sunset:</strong> <span id="sunset"></span></p>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
 </html>
- 
